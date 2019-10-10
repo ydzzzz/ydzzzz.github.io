@@ -1,0 +1,165 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>{{ site.title }}</title>
+    <meta http-equiv="content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="./static/css/screen.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="./static/css/responsive.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="./static/inc/colorbox.css" type="text/css" media="screen">
+    <link href="./static/css/default.css" type="text/css" rel="stylesheet">
+    <link rel="shortcut icon" href="./static/logo/logo.jpg" type="image/x-icon" />
+    <!-- ios桌面图标 -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57"
+        href="https://raw.githubusercontent.com/ydzzzz/ydzzzz.github.io/master/love/2018/2018-07-04.jpg">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"
+        href="https://raw.githubusercontent.com/ydzzzz/ydzzzz.github.io/master/love/2018/2018-07-04.jpg">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144"
+        href="https://raw.githubusercontent.com/ydzzzz/ydzzzz.github.io/master/love/2018/2018-07-04.jpg">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120"
+        href="https://raw.githubusercontent.com/ydzzzz/ydzzzz.github.io/master/love/2018/2018-07-04.jpg">
+    <!-- iOS全屏-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- iOS状态栏颜色-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- 设置启动画面 -->
+    <link href="https://raw.githubusercontent.com/ydzydzydz/blogphoto/master/splashscreens/iphone5_splash.png"
+        media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"
+        rel="apple-touch-startup-image" />
+    <link href="https://raw.githubusercontent.com/ydzydzydz/blogphoto/master/splashscreens/iphone6_splash.png"
+        media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)"
+        rel="apple-touch-startup-image" />
+    <link href="https://raw.githubusercontent.com/ydzydzydz/blogphoto/master/splashscreens/iphoneplus_splash.png"
+        media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)"
+        rel="apple-touch-startup-image" />
+    <link href="https://raw.githubusercontent.com/ydzydzydz/blogphoto/master/splashscreens/iphonex_splash.png"
+        media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)"
+        rel="apple-touch-startup-image" />
+    <link href="https://raw.githubusercontent.com/ydzydzydz/blogphoto/master/splashscreens/iphonexr_splash.png"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)"
+        rel="apple-touch-startup-image" />
+    <link href="https://raw.githubusercontent.com/ydzydzydz/blogphoto/master/splashscreens/iphonexsmax_splash.png"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)"
+        rel="apple-touch-startup-image" />
+    <link href="https://raw.githubusercontent.com/ydzydzydz/blogphoto/master/splashscreens/ipad_splash.png"
+        media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)"
+        rel="apple-touch-startup-image" />
+    <link href="https://raw.githubusercontent.com/ydzydzydz/blogphoto/master/splashscreens/ipadpro1_splash.png"
+        media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)"
+        rel="apple-touch-startup-image" />
+    <link href="https://raw.githubusercontent.com/ydzydzydz/blogphoto/master/splashscreens/ipadpro3_splash.png"
+        media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)"
+        rel="apple-touch-startup-image" />
+    <link href="https://raw.githubusercontent.com/ydzydzydz/blogphoto/master/splashscreens/ipadpro2_splash.png"
+        media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)"
+        rel="apple-touch-startup-image" />
+
+    <!-- 设置竖屏启动画面 -->
+    <link rel="apple-touch-startup-image" media="screen and (orientation: portrait)"
+        href="https://raw.githubusercontent.com/ydzydzydz/blogphoto/master/2.jpg" />
+    <!--竖-->
+    <!-- 设置横屏启动画面 -->
+    <link rel="apple-touch-startup-image" media="screen and (orientation: landscape)"
+        href="https://raw.githubusercontent.com/ydzydzydz/blogphoto/master/3.jpg" />
+    <!--横-->
+
+
+
+
+</head>
+
+<body>
+    <audio autoplay loop>
+        <source src="{{ site.url }}{{ site.bgmusic }}" type="audio/mpeg">
+    </audio>
+    <div class="container">
+        <div class="avatar"></div></a>
+        <h1>{{ site.description }}</h1>
+        <h2 id="subtitle">{{ site.timeline }}</h2>
+
+        <div id="timelineContainer">
+
+            <div class="timelineToggle">
+                <p><a class="expandAll">+ 全部展开</a></p>
+            </div>
+            <br class="clear">
+            <br class="clear">
+
+
+
+
+
+            <div class="timelineMajor">
+                <h2 class="timelineMajorMarker"><span>2016</span></h2>
+                <!-- /.timelineMinor -->
+                <dl class="timelineMinor">
+                    {% for love_16 in site.data.love_16 %}
+                    <dt id="{{ love_16.id }}"><a>{{ love_16.tittle }}</a></dt>
+                    <dd class="timelineEvent" id="{{ love_16.id }}EX" style="display:none;">
+                        <h3>{{ love_16.time }}</h3>
+                        <div class="media">
+                            <img src="{{ love_16.img }}" width="240" height="180">
+                        </div>
+                        <p>
+                            <p>{{ love_16.desc }}</p>
+                            <br class="clear">
+                    </dd>
+                    {% endfor %}
+                </dl>
+            </div>
+
+
+
+
+            <br class="clear">
+        </div>
+        <!-- /#timelineContainer -->
+    </div>
+    <!-- /.container -->
+
+
+
+
+
+
+
+
+    <div id="copyright">
+        Copyright © 2018 <a href='https://ydzzzz.github.io'>zhuangzhuang</a> 2018
+    </div>
+
+    <!-- GLOBAL CORE SCRIPTS -->
+    <script src="./static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./static/inc/colorbox.js"></script>
+    <script type="text/javascript" src="./static/js/timeliner.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.timeliner({
+                startOpen: [],
+                expandAllText: '+ 全部展开',
+                collapseAllText: '- 全部折叠'
+            });
+            // Colorbox Modal
+            //$(".CBmodal").colorbox({inline: true, initialWidth: 100, maxWidth: 682, initialHeight: 100, transition: "elastic", speed: 750});
+        });
+    </script>
+</body>
+
+</html>
+<script type="text/javascript">
+    $(function () {
+        var a = true;
+        $('.avatar').click(function (event) {
+            if (a == true) {
+                a = false;
+                $('audio')[0].pause();
+            } else {
+                a = true;
+                $('audio')[0].play();
+            }
+        });
+    });
+</script>
